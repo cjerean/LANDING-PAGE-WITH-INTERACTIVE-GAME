@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Dive Frenzy – Deep Divers Diner</title>
 <meta name="description" content="Play Dive Frenzy — the Deep Divers Diner arcade game. Swim as the Megalodon, eat smaller fish, and survive the deep!"/>
-<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="css/style.css"/>
 <style>
 .game-page { padding-top:68px; min-height:100vh; background:var(--bg-black); }
 .game-header { text-align:center; padding:36px 5% 20px; }
@@ -16,6 +16,21 @@
 }
 .game-controls-bar {
   display:flex; gap:12px; margin-bottom:16px; flex-wrap:wrap; justify-content:center;
+}
+.mode-selector {
+  display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:14px;
+}
+.mode-btn {
+  padding:8px 14px; border-radius:8px; border:1px solid var(--gray-border);
+  background:rgba(17,19,21,0.82); color:rgba(242,242,242,0.68);
+  font-family:'Exo 2',sans-serif; font-size:0.78rem; font-weight:700;
+  letter-spacing:0.08em; text-transform:uppercase; cursor:pointer;
+  transition:color 0.2s,border-color 0.2s,background 0.2s,box-shadow 0.2s;
+}
+.mode-btn:hover,
+.mode-btn.active {
+  color:var(--bright-aqua); border-color:var(--neon-outline);
+  background:rgba(12,142,131,0.16); box-shadow:0 0 14px rgba(0,208,230,0.18);
 }
 .game-btn {
   padding:10px 26px; border-radius:8px; font-family:'Exo 2',sans-serif;
@@ -75,10 +90,15 @@
   <div class="game-header">
     <span class="section-tag">🎮 Arcade</span>
     <h1><span class="glow-text">Dive Frenzy</span></h1>
-    <p>Swim as the Megalodon. Devour smaller sea creatures. Dodge the predators. How deep can you dive?</p>
+    <p>Swim as the Megalodon. Eat smaller fish, grow through the food chain, and turn yesterday's predators into tonight's dinner.</p>
   </div>
 
   <div class="game-wrap">
+    <div class="mode-selector" aria-label="Game modes">
+      <button class="mode-btn active" data-mode="classic" onclick="setGameMode('classic')">Classic</button>
+      <button class="mode-btn" data-mode="timeAttack" onclick="setGameMode('timeAttack')">Time Attack</button>
+      <button class="mode-btn" data-mode="survival" onclick="setGameMode('survival')">Survival</button>
+    </div>
     <div class="game-controls-bar">
       <button class="game-btn game-btn-start" onclick="startGame()">▶ START DIVE</button>
       <button class="game-btn game-btn-pause" onclick="pauseGame()">⏸ PAUSE</button>
@@ -91,11 +111,12 @@
       <h3>🌊 How to Dive</h3>
       <div class="instr-grid">
         <div class="instr-item"><div class="instr-icon">🕹️</div><div><strong>Move</strong><p>WASD or Arrow Keys to swim in any direction. Swipe on mobile.</p></div></div>
-        <div class="instr-item"><div class="instr-icon">🐟</div><div><strong>Eat Food</strong><p>Swim into small glowing fish, shrimp, and crabs to score points.</p></div></div>
-        <div class="instr-item"><div class="instr-icon">🪼</div><div><strong>Avoid Danger</strong><p>Steer clear of jellyfish and large predator fish — they'll cost you a life!</p></div></div>
-        <div class="instr-item"><div class="instr-icon">⬆️</div><div><strong>Level Up</strong><p>Every 8 creatures eaten bumps up the level — speed and spawn rate increase!</p></div></div>
-        <div class="instr-item"><div class="instr-icon">❤️</div><div><strong>Lives</strong><p>You have 3 lives. After each hit you get a brief moment of invincibility.</p></div></div>
-        <div class="instr-item"><div class="instr-icon">⏸</div><div><strong>Pause</strong><p>Press SPACE or ESC to pause anytime. Click buttons above to control the game.</p></div></div>
+        <div class="instr-item"><div class="instr-icon">🐟</div><div><strong>Eat Smaller Fish</strong><p>Fish marked EAT are safe. Each bite fills the growth meter and boosts your size.</p></div></div>
+        <div class="instr-item"><div class="instr-icon">🦈</div><div><strong>Respect Predators</strong><p>Fish marked RUN are too large for now. Grow enough and they become edible.</p></div></div>
+        <div class="instr-item"><div class="instr-icon">👑</div><div><strong>Classic Goal</strong><p>Reach apex size to become the biggest fish and win the dive.</p></div></div>
+        <div class="instr-item"><div class="instr-icon">⏱</div><div><strong>Time Attack</strong><p>You have 90 seconds to grow quickly and chase the highest score.</p></div></div>
+        <div class="instr-item"><div class="instr-icon">🌊</div><div><strong>Survival</strong><p>One life, endless pressure. The deep gets faster the longer you last.</p></div></div>
+        <div class="instr-item"><div class="instr-icon">⏸</div><div><strong>Pause</strong><p>Press SPACE, P, or ESC to pause anytime.</p></div></div>
       </div>
     </div>
   </div>
