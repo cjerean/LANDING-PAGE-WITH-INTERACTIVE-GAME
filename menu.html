@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Menu – Deep Divers Diner</title>
+<meta name="description" content="Explore the full Deep Divers Diner menu — legendary deep-sea dishes from Seafood Boil to Kraken BBQ and Diver's Brew."/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="menu.css"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">🦈</div>
+    <div class="nav-logo-text">Deep Divers Diner<small>Est. 1998 · Deep Sea Cuisine</small></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html" class="active">Menu</a></li>
+    <li><a href="game.html">Play</a></li>
+    <li><a href="game.html" class="btn btn-outline nav-cta">Play Game</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="menu-hero">
+  <canvas id="menuCanvas"></canvas>
+  <div class="menu-hero-content">
+    <span class="section-tag">The Deep Divers Menu</span>
+    <h1>Legendary <span class="glow-text">Deep-Sea</span> Cuisine</h1>
+    <p>Every dish is a dive into the unknown — crafted from the ocean's finest, served with mastery.</p>
+  </div>
+</div>
+
+<!-- FILTER TABS -->
+<div class="menu-tabs-bar">
+  <button class="menu-tab active" onclick="filterMenu('all',this)">🌊 All</button>
+  <button class="menu-tab" onclick="filterMenu('mains',this)">🦈 Mains</button>
+  <button class="menu-tab" onclick="filterMenu('starters',this)">🦑 Starters</button>
+  <button class="menu-tab" onclick="filterMenu('drinks',this)">🍺 Drinks</button>
+</div>
+
+<!-- MENU GRID -->
+<section class="menu-section">
+  <div class="menu-grid" id="menuGrid">
+
+    <div class="menu-card glass-card" data-cat="mains">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🪣</div>
+        <div class="menu-badge bestseller">🏆 Best Seller</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Seafood Boil</h3>
+          <span class="menu-price">$38</span>
+        </div>
+        <p>A thunderous cauldron of the ocean's finest — shrimp, crab legs, mussels, and clams slow-cooked in a bold Cajun spice brew with garlic butter corn and red potatoes. One pot rules them all.</p>
+        <div class="menu-tags"><span class="tag">Spicy</span><span class="tag">Sharing</span><span class="tag">Signature</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="mains">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🍔</div>
+        <div class="menu-badge popular">🔥 Popular</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Megurger</h3>
+          <span class="menu-price">$24</span>
+        </div>
+        <p>A jaw-dropping 8oz deep-sea fish patty stacked with crispy fried shrimp, zesty slaw, tartar aioli, and pickled seaweed on a toasted black sesame bun. The Megalodon of all burgers.</p>
+        <div class="menu-tags"><span class="tag">Crispy</span><span class="tag">Bold</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="mains">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🐙</div>
+        <div class="menu-badge popular">🔥 Popular</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Kraken BBQ</h3>
+          <span class="menu-price">$34</span>
+        </div>
+        <p>Smoked to perfection — tender octopus tentacles glazed in smoky dark molasses BBQ sauce, served over charred kelp rice with grilled sea vegetables and a citrus aioli drizzle.</p>
+        <div class="menu-tags"><span class="tag">Smoky</span><span class="tag">Grilled</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="mains">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🐟</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Leviathan Steak</h3>
+          <span class="menu-price">$42</span>
+        </div>
+        <p>A mighty swordfish steak, seared on volcanic salt stone to a perfect medium-rare crust, paired with seaweed butter sauce, roasted brine potatoes, and a crisp deep-diver salad.</p>
+        <div class="menu-tags"><span class="tag">Premium</span><span class="tag">Seared</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="starters">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🦑</div>
+        <div class="menu-badge">⭐ Fan Fave</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Colossal Calamari</h3>
+          <span class="menu-price">$18</span>
+        </div>
+        <p>Golden-fried rings of the deepest squid, coated in a crunchy panko shell with hints of sea salt and lemon zest, served alongside our legendary abyssal dipping sauce. Crispy. Oceanic. Addictive.</p>
+        <div class="menu-tags"><span class="tag">Fried</span><span class="tag">Starter</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="mains">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🍲</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Megalodon Stew</h3>
+          <span class="menu-price">$28</span>
+        </div>
+        <p>A rich, slow-simmered broth packed with chunks of deep-sea fish, clams, mussels, and smoky chorizo, thickened with ocean herbs and a touch of cream. Thick enough to fuel any ocean expedition.</p>
+        <div class="menu-tags"><span class="tag">Hearty</span><span class="tag">Rich</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="starters">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🌊</div>
+        <div class="menu-badge">✨ Chef's Pick</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Urchin Stew</h3>
+          <span class="menu-price">$32</span>
+        </div>
+        <p>A silky, umami-rich bisque crafted from fresh sea urchin (uni), blended with cream, white miso, and hand-picked ocean herbs — served with charred sourdough. A bowl of pure oceanic luxury.</p>
+        <div class="menu-tags"><span class="tag">Luxurious</span><span class="tag">Umami</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="mains">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🦀</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Crustacean Cutlet</h3>
+          <span class="menu-price">$29</span>
+        </div>
+        <p>Crispy breaded crab and lobster blend cutlets, pan-fried to a golden shell with herbs and sea salt, served with tangy sea-brine sauce, pickled seaweed, and a fresh coastal slaw.</p>
+        <div class="menu-tags"><span class="tag">Crispy</span><span class="tag">Seafood</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="drinks">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🧃</div>
+        <div class="menu-badge">🌿 Non-Alcoholic</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Tankard of Plumfruit Juice</h3>
+          <span class="menu-price">$9</span>
+        </div>
+        <p>A legendary brew of mythical deep-ocean plumfruit — a rare berry with notes of tropical passion fruit and dark cherry — served ice-cold in an oversized dive-themed pewter tankard. Refreshingly mythic.</p>
+        <div class="menu-tags"><span class="tag">Cold</span><span class="tag">Refreshing</span><span class="tag">Non-Alc</span></div>
+      </div>
+    </div>
+
+    <div class="menu-card glass-card" data-cat="drinks">
+      <div class="menu-card-top">
+        <div class="menu-emoji">🍺</div>
+        <div class="menu-badge popular">🔥 Popular</div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-header">
+          <h3>Diver's Brew</h3>
+          <span class="menu-price">$12</span>
+        </div>
+        <p>Our signature craft ale, brewed in-house with tidal grain and sea kelp, carrying deep amber hues with crisp briny notes and a smooth oceanic finish. The ultimate reward after a deep dive.</p>
+        <div class="menu-tags"><span class="tag">Craft Ale</span><span class="tag">Signature</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner" style="padding:60px 5%;">
+  <div class="cta-inner">
+    <h2>Hungry for <span>Adventure?</span></h2>
+    <p>Test your deep-sea survival skills while you wait — play our ocean arcade game!</p>
+    <div class="cta-btns">
+      <a href="game.html" class="btn btn-primary">🎮 Play Dive Frenzy</a>
+      <a href="index.html" class="btn btn-outline">🏠 Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:14px;">
+        <div class="nav-logo-icon">🦈</div>
+        <div class="nav-logo-text">Deep Divers Diner<small>Est. 1998 · Deep Sea Cuisine</small></div>
+      </a>
+      <p>Serving legendary deep-sea cuisine since 1998. Where every meal is a dive into flavor and ocean wonder.</p>
+      <div class="footer-socials" style="margin-top:18px;">
+        <a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">f</a>
+        <a href="#" class="social-btn">📷</a><a href="#" class="social-btn">▶</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-heading">Navigate</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="game.html">Dive Game</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Top Dishes</p>
+      <ul class="footer-links">
+        <li><a href="#">Seafood Boil</a></li>
+        <li><a href="#">Megurger</a></li>
+        <li><a href="#">Kraken BBQ</a></li>
+        <li><a href="#">Leviathan Steak</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Find Us</p>
+      <p class="footer-contact-line">📍 1 Abyss Pier, Port Deep</p>
+      <p class="footer-contact-line">📞 +1 (800) DEEP-DIVE</p>
+      <p class="footer-contact-line">✉️ hello@deepdiversdiner.com</p>
+      <p class="footer-contact-line">🕐 Mon–Sun · 11am – 11pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Deep Divers Diner. All rights reserved.</span>
+    <span>🌊 Diving deeper since 1998</span>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{ document.getElementById('navbar').style.background=window.scrollY>50?'rgba(5,7,7,0.98)':'rgba(5,7,7,0.85)'; });
+
+function filterMenu(cat, btn){
+  document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.menu-card').forEach(card=>{
+    if(cat==='all'||card.dataset.cat===cat){ card.style.display='flex'; setTimeout(()=>card.style.opacity='1',10); }
+    else { card.style.opacity='0'; setTimeout(()=>card.style.display='none',300); }
+  });
+}
+
+// Menu hero canvas
+const canvas=document.getElementById('menuCanvas'), ctx=canvas.getContext('2d');
+let W,H,bubs=[];
+function rsz(){ W=canvas.width=window.innerWidth; H=canvas.height=canvas.parentElement.offsetHeight; }
+rsz(); window.addEventListener('resize',rsz);
+function mkb(){ return {x:Math.random()*W,y:H+10,r:Math.random()*3+1,sp:Math.random()*0.7+0.2,op:Math.random()*0.3+0.05}; }
+for(let i=0;i<50;i++) bubs.push({...mkb(),y:Math.random()*H});
+(function loop(){
+  const g=ctx.createLinearGradient(0,0,0,H);
+  g.addColorStop(0,'#050707'); g.addColorStop(1,'#0D3A36');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+  bubs.forEach((b,i)=>{ b.y-=b.sp; if(b.y<-5)bubs[i]=mkb(); ctx.beginPath(); ctx.arc(b.x,b.y,b.r,0,Math.PI*2); ctx.strokeStyle=`rgba(31,230,255,${b.op})`; ctx.lineWidth=1; ctx.stroke(); });
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

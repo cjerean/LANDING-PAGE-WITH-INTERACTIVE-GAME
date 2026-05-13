@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Deep Divers Diner - Home</title>
+    <meta name="description"
+        content="Welcome to Deep Divers Diner — legendary deep-sea dishes from Seafood Boil to Kraken BBQ and Diver's Brew." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">🦈</div>
+            <div class="nav-logo-text">Deep Divers Diner<small>Est. 1998 · Deep Sea Cuisine</small></div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="game.html">Play</a></li>
+            <li><a href="game.html" class="btn btn-outline nav-cta">Play Game</a></li>
+        </ul>
+        <div class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home" style="padding: 0;">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <span class="hero-tag">Welcome to the Abyss</span>
+            <h1 class="hero-title">Dive Into <span class="glow-text">Legendary</span> Flavor</h1>
+            <p class="hero-sub">Experience deep-sea cuisine like never before. From mythical beasts to oceanic bounties,
+                we serve the unexplored.</p>
+            <div class="hero-btns">
+                <a href="menu.html" class="btn btn-primary">Explore Menu</a>
+                <a href="#about" class="btn btn-outline">Our Story</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-num">25</span>
+            <span>Yrs</span>
+            <p>Serving the Deep</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-num">50k</span>
+            <span>+</span>
+            <p>Happy Divers</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-num">100</span>
+            <span>%</span>
+            <p>Fresh Catch</p>
+        </div>
+    </div>
+    <!-- WHY WE STAND OUT -->
+    <section id="why-us">
+        <div class="section-header"
+            style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="section-title">What Makes Us <span class="glow-text">Stand Out</span></h2>
+            <p class="section-sub">We don't just cook seafood. We conquer the ocean.</p>
+        </div>
+
+        <div class="usp-grid">
+            <div class="usp-card glass-card">
+                <span class="usp-icon">🌊</span>
+                <h3>Abyssal Ingredients</h3>
+                <p>We source ingredients from the deepest, most unexplored parts of the ocean.</p>
+            </div>
+            <div class="usp-card glass-card">
+                <span class="usp-icon">🔥</span>
+                <h3>Volcanic Cooking</h3>
+                <p>Our meals are seared on genuine deep-sea volcanic salt stones.</p>
+            </div>
+            <div class="usp-card glass-card">
+                <span class="usp-icon">⚓</span>
+                <h3>Nautical Vibe</h3>
+                <p>Immerse yourself in a dining experience built for true sea explorers.</p>
+            </div>
+            <div class="usp-card glass-card">
+                <span class="usp-icon">🦈</span>
+                <h3>Legendary Recipes</h3>
+                <p>Ancient recipes guarded by sea captains, perfected by our master chefs.</p>
+            </div>
+        </div>
+    </section>
+    <!-- BEST SELLERS -->
+    <section id="bestsellers" style="background: rgba(13,58,54,0.1);">
+        <div class="section-header"
+            style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <span class="section-tag">Crowd Favorites</span>
+            <h2 class="section-title">Our <span class="glow-text">Best Selling</span> Products</h2>
+            <p class="section-sub">The dishes that built our legendary reputation.</p>
+        </div>
+
+        <div class="bs-grid">
+            <div class="bs-card glass-card featured">
+                <span class="bs-badge">🏆 #1 Legendary Dish</span>
+                <span class="bs-emoji">🪣</span>
+                <h3>Seafood Boil</h3>
+                <p>A thunderous cauldron of the ocean's finest — shrimp, crab legs, mussels, and clams slow-cooked in a
+                    bold Cajun spice brew.</p>
+                <div class="bs-footer">
+                    <span class="bs-price">$38</span>
+                    <a href="menu.html" class="btn btn-primary btn-sm">Order Now</a>
+                </div>
+            </div>
+
+            <div class="bs-card glass-card">
+                <span class="bs-emoji">🍔</span>
+                <h3>Megurger</h3>
+                <p>A jaw-dropping 8oz deep-sea fish patty stacked with crispy fried shrimp and zesty slaw.</p>
+                <div class="bs-footer">
+                    <span class="bs-price">$24</span>
+                </div>
+            </div>
+
+            <div class="bs-card glass-card">
+                <span class="bs-emoji">🐙</span>
+                <h3>Kraken BBQ</h3>
+                <p>Tender octopus tentacles glazed in smoky dark molasses BBQ sauce.</p>
+                <div class="bs-footer">
+                    <span class="bs-price">$34</span>
+                </div>
+            </div>
+
+            <div class="bs-card glass-card">
+                <span class="bs-emoji">🍺</span>
+                <h3>Diver's Brew</h3>
+                <p>Our signature craft ale, brewed in-house with tidal grain and sea kelp.</p>
+                <div class="bs-footer">
+                    <span class="bs-price">$12</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top: 50px;">
+            <a href="menu.html" class="btn btn-outline">View Full Menu</a>
+        </div>
+    </section>
+    <!-- HISTORY -->
+    <section id="about">
+        <div class="history-inner">
+            <div>
+                <span class="section-tag">Our Story</span>
+                <h2 class="section-title">History of <span class="glow-text">The Business</span></h2>
+                <p class="history-lead">Born from the ocean depths, Deep Divers Diner has been serving legendary meals
+                    to sea-worn travelers and thrill-seekers alike since 1998.</p>
+
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-year">1998</span>
+                            <h4>The First Dive</h4>
+                            <p>Captain Morgan founded the diner inside a refurbished submarine hull on the edge of the
+                                Mariana Trench.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-year">2005</span>
+                            <h4>Discovering the Kraken</h4>
+                            <p>Our head chef introduced the legendary Kraken BBQ, cementing our status in the culinary
+                                world.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-year">2024</span>
+                            <h4>Going Global</h4>
+                            <p>We expanded our reach to land-dwellers, bringing deep-sea delicacies to major ports
+                                worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-visual">
+                <div class="history-img-wrap">
+                    <div class="history-img-glow"></div>
+                    <div class="history-emblem">
+                        <div class="emblem-ring">⚓</div>
+                        <h3>Deep Divers</h3>
+                        <p>Established 1998</p>
+                        <span class="emblem-tagline">Fear no depth.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TESTIMONIALS -->
+    <section id="reviews" style="background: rgba(13,58,54,0.05);">
+        <div class="section-header"
+            style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <span class="section-tag">Sailor Tales</span>
+            <h2 class="section-title">What Our <span class="glow-text">Divers Say</span></h2>
+        </div>
+
+        <div class="testi-grid">
+            <div class="testi-card glass-card">
+                <div class="testi-stars">★★★★★</div>
+                <p>"The Seafood Boil is out of this world. Literally feels like eating the ocean in the best way
+                    possible. A must-try!"</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">AJ</div>
+                    <div>
+                        <strong>Arthur J.</strong>
+                        <span>Veteran Diver</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card glass-card">
+                <div class="testi-stars">★★★★★</div>
+                <p>"I traveled 500 miles just to try the Kraken BBQ. Worth every mile. The smoky flavor is
+                    unbelievable."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">SM</div>
+                    <div>
+                        <strong>Sarah M.</strong>
+                        <span>Food Critic</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card glass-card">
+                <div class="testi-stars">★★★★★</div>
+                <p>"The Megurger conquered my appetite. The atmosphere is top-notch and the Diver's Brew is the perfect
+                    pairing."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">CR</div>
+                    <div>
+                        <strong>Captain Ron</strong>
+                        <span>Sailor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA -->
+    <section class="cta-banner" style="padding: 70px 5%; margin: 0;">
+        <div class="cta-inner">
+            <h2>Ready to <span>Take the Plunge?</span></h2>
+            <p>Book your table today and experience the taste of the abyss. Or test your skills in our Deep Dive Arcade
+                game while you wait.</p>
+            <div class="cta-btns">
+                <a href="menu.html" class="btn btn-primary">View Menu</a>
+                <a href="game.html" class="btn btn-outline">Play Arcade Game</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:14px;">
+                    <div class="nav-logo-icon">🦈</div>
+                    <div class="nav-logo-text">Deep Divers Diner<small>Est. 1998 · Deep Sea Cuisine</small></div>
+                </a>
+                <p>Serving legendary deep-sea cuisine since 1998. Where every meal is a dive into flavor and ocean
+                    wonder.</p>
+                <div class="footer-socials" style="margin-top:18px;">
+                    <a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">f</a>
+                    <a href="#" class="social-btn">📷</a><a href="#" class="social-btn">▶</a>
+                </div>
+            </div>
+            <div>
+                <p class="footer-heading">Navigate</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="game.html">Dive Game</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Top Dishes</p>
+                <ul class="footer-links">
+                    <li><a href="menu.html">Seafood Boil</a></li>
+                    <li><a href="menu.html">Megurger</a></li>
+                    <li><a href="menu.html">Kraken BBQ</a></li>
+                    <li><a href="menu.html">Leviathan Steak</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Find Us</p>
+                <p class="footer-contact-line">📍 1 Abyss Pier, Port Deep</p>
+                <p class="footer-contact-line">📞 +1 (800) DEEP-DIVE</p>
+                <p class="footer-contact-line">✉️ hello@deepdiversdiner.com</p>
+                <p class="footer-contact-line">🕐 Mon–Sun · 11am – 11pm</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 Deep Divers Diner. All rights reserved.</span>
+            <span>🌊 Diving deeper since 1998</span>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { document.getElementById('navbar').style.background = window.scrollY > 50 ? 'rgba(5,7,7,0.98)' : 'rgba(5,7,7,0.85)'; });
+        // Hero canvas animation
+        const canvas = document.getElementById('heroCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let W, H, bubs = [];
+            function rsz() { W = canvas.width = window.innerWidth; H = canvas.height = canvas.parentElement.offsetHeight; }
+            rsz(); window.addEventListener('resize', rsz);
+            function mkb() { return { x: Math.random() * W, y: H + 10, r: Math.random() * 3 + 1, sp: Math.random() * 0.7 + 0.2, op: Math.random() * 0.3 + 0.05 }; }
+            for (let i = 0; i < 50; i++) bubs.push({ ...mkb(), y: Math.random() * H });
+            (function loop() {
+                const g = ctx.createLinearGradient(0, 0, 0, H);
+                g.addColorStop(0, '#050707'); g.addColorStop(1, '#0D3A36');
+                ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+                bubs.forEach((b, i) => {
+                    b.y -= b.sp;
+                    if (b.y < -5) bubs[i] = mkb();
+                    ctx.beginPath();
+                    ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+                    ctx.strokeStyle = `rgba(31,230,255,${b.op})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                });
+                requestAnimationFrame(loop);
+            })();
+        }
+    </script>
+</body>
+
+</html>
