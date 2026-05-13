@@ -6,6 +6,9 @@ const H = 550;
 canvas.width = W;
 canvas.height = H;
 
+const gameBackground = new Image();
+gameBackground.src = 'game_asset/background.jpeg';
+
 const MODES = {
   classic: {
     label: 'Classic',
@@ -462,6 +465,16 @@ function drawBg() {
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, W, H);
 
+  if (gameBackground.complete && gameBackground.naturalWidth > 0) {
+    drawCoverImage(gameBackground, 0, 0, W, H);
+    const shade = ctx.createLinearGradient(0, 0, 0, H);
+    shade.addColorStop(0, 'rgba(5,14,14,0.34)');
+    shade.addColorStop(0.55, 'rgba(5,7,7,0.22)');
+    shade.addColorStop(1, 'rgba(5,7,7,0.52)');
+    ctx.fillStyle = shade;
+    ctx.fillRect(0, 0, W, H);
+  }
+
   ctx.save();
   for (let i = 0; i < 5; i++) {
     const rx = (bgOffset + i * 200) % W;
@@ -472,6 +485,25 @@ function drawBg() {
     ctx.fillRect(0, 0, W, H);
   }
   ctx.restore();
+}
+
+function drawCoverImage(image, x, y, w, h) {
+  const imageRatio = image.naturalWidth / image.naturalHeight;
+  const canvasRatio = w / h;
+  let sourceW = image.naturalWidth;
+  let sourceH = image.naturalHeight;
+  let sourceX = 0;
+  let sourceY = 0;
+
+  if (imageRatio > canvasRatio) {
+    sourceW = image.naturalHeight * canvasRatio;
+    sourceX = (image.naturalWidth - sourceW) / 2;
+  } else {
+    sourceH = image.naturalWidth / canvasRatio;
+    sourceY = (image.naturalHeight - sourceH) / 2;
+  }
+
+  ctx.drawImage(image, sourceX, sourceY, sourceW, sourceH, x, y, w, h);
 }
 
 function drawSeaweed() {
